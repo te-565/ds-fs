@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+## Convert all .ipynb files to .py and .html versions for git
+
+files=` git diff --cached --name-only | grep 'ipynb' | grep -v '.ipynb_checkpoints'`
+
+# Don't treat spaces as a new file
+OIFS="$IFS"
+IFS=$'\n'
+
+for f in $files; do
+
+	echo $f
+
+	# Get dirnames and create them
+	newdir=`dirname "$f"`
+	mkdir -p "nb_src/$newdir"
+	mkdir -p "nb_render/$newdir"
+
+	# Convert to .py and .html
+	pyfile="nb_src/${f%.ipynb}.py"
+	htmlfile="nb_render/${f%.ipynb}.html"
+
+	jupyter nbconvert --to script "$f" --stdout > "$pyfile"
+	jupyter nbconvert --to html "$f" --stdout > "$htmlfile"
+
+	# Add it back to index
+	git add "$pyfile"
+	git add "$htmlfile"
+
+done
+
+# Reset spaces
+IFS="$OIFS
