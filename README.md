@@ -5,13 +5,13 @@ Note that this is a work in progress and the chapters in the individual sections
 
 The repo is made up of Jupyter Notebooks and is split into sections as follows:
 
-###Section A: Statistics
+### Section A: Statistics
 	A00. Introduction to Statistics
 	A01. Basic Statistics
 	A02. Probability
 	A03. Hypothesis & Inference
 
-###Section B: Data Engineering
+### Section B: Data Engineering
 	A00. Introduction to Data Engineering
 	Axx. Databases Types
 	Axx. Airflow Pipelines
@@ -19,24 +19,24 @@ The repo is made up of Jupyter Notebooks and is split into sections as follows:
 	Axx. Big Data Architecture
 	Axx. Hadoop / Spark etc.
 
-###Section C: Machine Learning
+### Section C: Machine Learning
 	D00. Introduction to Machine Learning
 	D01. Linear Algebra
 	D02. Gradient Descent
 	D03. A First Machine Learning Project
 
-###Section D: Deep Learning
+### Section D: Deep Learning
 	D00. Introduction to Deep Learning
 
-###Section E: Natural Language Processing (NLP)
+### Section E: Natural Language Processing (NLP)
 	E00. Introduction to Natural Language Processing (NLP)
 
-###Section F: Miscellaneous
+### Section F: Miscellaneous
 	F00. Introduction to Miscellaneous
 	F01. Github
 	F02. Cloud Computing
 	F03. Testing
 
-###Section X: Appendices
+### Section X: Appendices
 
-###Section Z: Notes
+### Section Z: Notes
